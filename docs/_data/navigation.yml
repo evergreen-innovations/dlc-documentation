@@ -1,0 +1,18 @@
+main:
+  - title: Theory
+    url: /theory/
+  - title: Tool Usage
+    url: /documentation/
+
+theory:
+  - title: Theory
+    children:
+      - title: Quality Control
+        url: /theory/qualityControl
+
+
+documentation:
+  - title: Tool Usage
+    children:
+      - title: Data Disclaimers
+        url: /documentation/dataDisclaimers
