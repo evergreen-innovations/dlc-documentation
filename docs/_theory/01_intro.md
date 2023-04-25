@@ -18,3 +18,8 @@ This could eventually be spread out to have sections for wave, tide, ...
 for i in range(10):
     print("does this work?")
 ```
+
+
+# Testing out latex
+
+$$ \nabla_\boldsymbol{x} J(\boldsymbol{x}) $$
