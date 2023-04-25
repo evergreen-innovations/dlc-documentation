@@ -1,5 +1,5 @@
 ---
-title: Introduction
+title: Tool Usage
 permalink: /documentation/
 sidebar:
   nav: "documentation"

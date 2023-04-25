@@ -9,7 +9,8 @@ theory:
     children:
       - title: Quality Control
         url: /theory/qualityControl
-
+      - title: Statistics
+        url: /theory/stats
 
 documentation:
   - title: Tool Usage

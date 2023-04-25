@@ -30,7 +30,7 @@ breadcrumbs: true
 # Build settings
 # theme: minima
 remote_theme           : "mmistakes/minimal-mistakes"
-minimal_mistakes_skin    : "air" # "default" , "air", "aqua", "contrast", "dark", "dirt", "neon", "mint", "plum", "sunrise"
+minimal_mistakes_skin    : "contrast" # "default" , "air", "aqua", "contrast", "dark", "dirt", "neon", "mint", "plum", "sunrise"
 
 plugins:
 - jekyll-feed
@@ -44,9 +44,14 @@ head_scripts:
 markdown: kramdown
 highlighter: rouge
 lsi: false
-excerpt_separator: "\n\n"
+excerpt_separator: "\n"
 incremental: true
 
+# search: true
+logo: "/assets/images/dlc-logo.png"
+
+# doc name
+doc-name: "IEC TS 62600-2"
 
 kramdown:
   input: GFM
@@ -60,9 +65,6 @@ kramdown:
 
 
 collections:
-#  docs:
-#    output: true
-#    permalink: /:collection/:path/
   theory:
     output: true
     permalink: /:collection/:path/:title
@@ -73,17 +75,6 @@ collections:
 
 # Defaults
 defaults:
-  # _posts
-  - scope:
-      path: ""
-      type: posts
-    values:
-      layout: single
-      author_profile: true
-      read_time: true
-      comments: # true
-      share: true
-      related: true
   # _theory
   - scope:
       path: ""

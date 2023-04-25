@@ -1,25 +1,15 @@
 ---
-title: Introduction
+title: Theory
 permalink: /theory/
 sidebar:
   nav: "theory"
 ---
 
-# Test
 
-This will be some introduction content to the theory section of the tool.
+The DLC Generator supports and enables WEC developers, **who own a copy of the IEC TS 62600-2 Technical Specification**, in generating Design Load Cases (DLC's).
 
-There will also be sub-sections for each step in the process.
+### Theory covers
 
-This could eventually be spread out to have sections for wave, tide, ...
+- Mathematics & equations used for calculations
+- Guidance on best practices and recommendations from the technical specification
 
-
-```python
-for i in range(10):
-    print("does this work?")
-```
-
-
-# Testing out latex
-
-$$ \nabla_\boldsymbol{x} J(\boldsymbol{x}) $$
