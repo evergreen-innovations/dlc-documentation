@@ -27,7 +27,7 @@ Calculates the joint distribution of the sea states and draws contour lines from
 
 {{ site.doc-name }} indicates that contour statistical analysis is preferred when possible. 
 
-### Model Structure <!-- omit in toc -->
+### Model Structures <!-- omit in toc -->
 
 The tool currently offers three model structures that can be selected.  The selection can be done using either {% raw %} $$T_e$$ {% endraw %} or {% raw %} $$T_p$$ {% endraw %} for the period type, dependent on if the source has the given period value.
 
