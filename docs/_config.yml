@@ -38,7 +38,7 @@ plugins:
 - jekyll-include-cache
 
 head_scripts:
-- https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML
+- https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML
 
 # Build settings
 markdown: kramdown
@@ -51,7 +51,8 @@ incremental: true
 logo: "/assets/images/dlc-logo.png"
 
 # doc name
-doc-name: "IEC TS 62600-2"
+doc-name: IEC TS 62600-2
+doc-link: https://webstore.iec.ch/publication/62399
 
 kramdown:
   input: GFM

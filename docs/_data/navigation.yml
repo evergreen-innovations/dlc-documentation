@@ -11,9 +11,15 @@ theory:
         url: /theory/qualityControl
       - title: Statistics
         url: /theory/stats
+      - title: DLC & Sea State Realization
+        url: /theory/surfaceElevation
+      - title: Response Analysis
+        url: /theory/responseAnalysis
 
 documentation:
   - title: Tool Usage
     children:
       - title: Data Disclaimers
         url: /documentation/dataDisclaimers
+      - title: Response Analysis Upload
+        url: /documentation/responseAnalysis
