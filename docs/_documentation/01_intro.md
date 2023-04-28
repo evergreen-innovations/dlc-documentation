@@ -20,14 +20,14 @@ gallery:
     image_path: /assets/images/response.png
     alt: "Response analysis page image"
     title: "Response analysis"
-     
+classes: wide 
 ---
 
 The DLC Generator tool is geared towards marine energy design conditions. In essence, the tool is intended to help marine energy developers obtain design load conditions, including 1- and 50-year sea states. These return periods are requirements according to [{{site.doc-name}}]({{site.doc-link}}).
 
 {% include gallery layout="half"%}
 
-The Tool:
+### The Tool
 
 1. Collects site data from over 7.9 million unique sources of modeled and measured data.
 2. Uses quality-controlled site data to quantify stochastic sea states through different validated and accepted statistical approaches.
@@ -35,7 +35,9 @@ The Tool:
 4. Performs extreme response analysis on the results of tank testing or numerical modeling to quantify extreme characteristics.
 
 
-This documentation section does not cover the theory behind the scenes, please see [Theory](/theory/) for details on implementations and references.
+This documentation section does not cover the theory behind the scenes, please see the [theory docs](/theory/) for details on implementations and references.
+
+
 
 
 

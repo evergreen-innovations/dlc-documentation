@@ -30,7 +30,7 @@ breadcrumbs: true
 # Build settings
 # theme: minima
 remote_theme           : "mmistakes/minimal-mistakes"
-minimal_mistakes_skin    : "contrast" # "default" , "air", "aqua", "contrast", "dark", "dirt", "neon", "mint", "plum", "sunrise"
+minimal_mistakes_skin    : "dark" # "default" , "air", "aqua", "contrast", "dark", "dirt", "neon", "mint", "plum", "sunrise"
 
 plugins:
 - jekyll-feed
@@ -64,7 +64,6 @@ kramdown:
   smart_quotes: lsquo,rsquo,ldquo,rdquo
   enable_coderay: false
 
-
 collections:
   theory:
     output: true
@@ -82,7 +81,7 @@ defaults:
       type: theory
     values:
       layout: single
-      classes: wide
+      # classes: wide
       read_time: false
       author_profile: false
       share: false
@@ -95,7 +94,7 @@ defaults:
       type: documentation
     values:
       layout: single
-      classes: wide
+      # classes: wide
       author_profile: true
       share: false
       comments: false

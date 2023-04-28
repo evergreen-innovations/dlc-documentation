@@ -3,18 +3,19 @@ title: Statistics
 permalink: /theory/stats
 sidebar:
   nav: "theory"
+toc: true
+toc_label: "Sections"
+toc_icon: "cog"
+toc_sticky: true
 ---
 
-Statistics take the cleaned site data and quantify sea states as significant wave height ({% raw %}$$ H_{mo} $${% endraw %}) and period ({% raw %}$$ T_e $$ {% endraw %} or {% raw %} $$ T_p $${% endraw %}) pairs.  These spectral parameters define the extreme and abnormal stochastic sea states for your site location.
+Statistics take the cleaned site data and quantify sea states as significant wave height ({% raw %}$$ H_{m0} $${% endraw %}) and period ({% raw %}$$ T_e $$ {% endraw %} or {% raw %} $$ T_p $${% endraw %}) pairs.  These spectral parameters define the extreme and abnormal stochastic sea states for your site location.
 
 {{ site.doc-name }}, Table 7, specifies 3 unique wave conditions as part of the Design Load Cases: **{% raw %}$$ H_{m1} $${% endraw %}**, **{% raw %}$$ H_{m50} $${% endraw %}**, and **{% raw %}$$ H_{rated} $${% endraw %}**.  The statistics quantify spectral parameters for the {% raw %}$$ H_{m1} $${% endraw %} and {% raw %}$$ H_{m50} $${% endraw %} requirements.
 
-##### Approaches
+# Approaches
 
 {{ site.doc-name }} allows for spectral parameters of the stochastic sea states to be determined using Contour or Univariate approaches. See the recommended practice [DNV-RP-C205](https://www.dnv.com/oilgas/download/dnv-rp-c205-environmental-conditions-and-environmental-loads.html) and section 6.2.2.4 of {{ site.doc-name }} for more information on recommended practices.
-
-- [Joint Distribution and Contour Methods](#joint-distribution-and-contour-methods)
-- [Univariate Methods](#univariate-methods)
 
 # Joint Distribution and Contour Methods
 
@@ -26,7 +27,7 @@ The tool currently offers three model structures that can be selected.  The sele
 
 Depending on your device, site data, and what loads may be the most destructive, select a model structure for each return period (1 and 50 years) to best fit your individual needs.
 
-##### OMAE 2020<!-- omit in toc -->
+### OMAE 2020<!-- omit in toc -->
 
 The OMAE 2020 Model Structure uses the [virocon](https://github.com/virocon-organization/virocon) package. See their publication on their software for a concise description [here](https://github.com/ahaselsteiner/publications/blob/master/2018-10-25_SoftwareX_ViroCon_revised.pdf).
 
@@ -47,7 +48,7 @@ $$  T_e/T_p = 0.85 $$
 
 for a Bretschneider spectrum that are used for converting {% raw %}$$T_p$${% endraw %} or {% raw %}$$T_e$${% endraw %} to {% raw %}$$T_z$${% endraw %}.
 
-##### PCA<!-- omit in toc -->
+### PCA<!-- omit in toc -->
 
 The Principal Component Analysis (PCA) model structure is implemented by [MHKiT](https://mhkit-software.github.io/MHKiT/index.html).  
 
@@ -56,7 +57,7 @@ MHKiT computes the contour using their [`mhkit.wave.contours.PCA_contour`](https
 See code implementation details of the modified principal component analysis [here](https://mhkit-software.github.io/MHKiT/_modules/mhkit/wave/contours.html#environmental_contours), scroll to the `_principal_component_analysis` function definition. 
 
 
-##### Gaussian<!-- omit in toc -->
+### Gaussian<!-- omit in toc -->
 
 The Gaussian Model structure is implemented by [MHKiT](https://mhkit-software.github.io/MHKiT/index.html).  
 
@@ -65,15 +66,17 @@ MHKiT computes the contour using their [`mhkit.wave.contours.environmental_conto
 The contours are calculated from a Gaussian copula. See the code implementation details [here](https://mhkit-software.github.io/MHKiT/_modules/mhkit/wave/contours.html#environmental_contours), scroll to the `_gaussian_copula` definition.
 
 
-#### IFORM Contour<!-- omit in toc -->
+## IFORM Contour<!-- omit in toc -->
 
-All contours are calculated using the I-FORM approach. I-FORM is the inverse first order reliability method.  This is used to calculate the contour line from the different joint distributions available for selection.  More information on the IFORM contours can be found in [DNV-RP-C205](https://www.dnv.com/oilgas/download/dnv-rp-c205-environmental-conditions-and-environmental-loads.html) Section 3.7 Extreme Value Distribution.
+All contours are calculated using the I-FORM approach. I-FORM is the inverse first order reliability method. More information on the IFORM contours can be found in [DNV-RP-C205](https://www.dnv.com/oilgas/download/dnv-rp-c205-environmental-conditions-and-environmental-loads.html) Section 3.7 Extreme Value Distribution.
 
 [Winterstein et al. (1993)](https://www.researchgate.net/publication/288935223_Environmental_parameters_for_extreme_response_inverse_FORM_with_omission_factors) introduces the IFORM contour.
 
-#### Contour Sampling<!-- omit in toc -->
+## Contour Sampling<!-- omit in toc -->
 
-Once contours have been formed, use either number of samples or width of intervals between the samples to define what sea states will be available for 
+Once contours have been formed, use either number of samples or width of intervals between the samples to define what sea states will be available for generating surface elevation time series from.
+
+The {% raw %}$$H_{m0}$${% endraw %} values are interpolated from the contour line from the provided at the selected period points using [`scipy.interpolate.interp1d`](https://docs.scipy.org/doc/scipy/reference/generated/scipy.interpolate.interp1d.html)
 
 # Univariate Methods
 
@@ -94,15 +97,15 @@ Calculations for univariate distributions are implemented via [MHKiT](https://mh
 The DLC Generator offers four different distributions to be calculated.  Depending on your specific device needs and modeling preferences, a method can be selected for each required return period.  
 
 All univariate methods follow the following general architecture:
-1. Approximate the distribution for the {% raw %}$$H_{mo}$${% endraw %} time series using the [MHKiT Loads Module](https://mhkit-software.github.io/MHKiT/mhkit-python/api.loads.html#extreme) for the selected method
+1. Approximate the distribution for the {% raw %}$$H_{m0}$${% endraw %} time series using the [MHKiT Loads Module](https://mhkit-software.github.io/MHKiT/mhkit-python/api.loads.html#extreme) for the selected method
 2. Calculate the {% raw %}$$H_{m(n)}$${% endraw %} value from the given distribution corresponding to a particular return year using [MHKiT](https://mhkit-software.github.io/MHKiT/mhkit-python/api.loads.html#mhkit.loads.extreme.return_year_value)
 3. Use {{ site.doc-name }} Formula (3) Section 6.2.2.3 to calculate the associated {% raw %}$$T_p$${% endraw %} range in seconds.
 
 A Q-Q plot is generated to help analyze the quality of fit of the data to the given distribution.
 
-##### Annual Maxima<!-- omit in toc -->
+### Annual Maxima<!-- omit in toc -->
 
-The annual maxima method fits the **yearly maxima** across the {% raw %}$$H_{mo}$${% endraw %} time series. The MHKiT function used is [`mhkit.loads.extreme.ste_block_maxima_gev`](https://mhkit-software.github.io/MHKiT/mhkit-python/api.loads.html#mhkit.loads.extreme.ste_block_maxima_gev).
+The annual maxima method fits the **yearly maxima** across the {% raw %}$$H_{m0}$${% endraw %} time series. The MHKiT function used is [`mhkit.loads.extreme.ste_block_maxima_gev`](https://mhkit-software.github.io/MHKiT/mhkit-python/api.loads.html#mhkit.loads.extreme.ste_block_maxima_gev).
 
 There are a couple limitations to the annual maxima method:
 
@@ -111,9 +114,9 @@ There are a couple limitations to the annual maxima method:
 
 
 
-##### Peaks Over Threshold<!-- omit in toc -->
+### Peaks Over Threshold<!-- omit in toc -->
 
-The Peaks over threshold method fits the values found across the {% raw %}$$H_{mo}$${% endraw %} time series that are found to be above the threshold.  Currently, the threshold calculated using the 99th percentile of the data, resulting in fitting the top 1% of the {% raw %}$$H_{mo}$${% endraw %} time series.
+The peaks over threshold method fits the values found across the {% raw %}$$H_{m0}$${% endraw %} time series that are found to be above the threshold.  Currently, the threshold calculated using the 99th percentile of the data, resulting in fitting the top 1% of the {% raw %}$$H_{m0}$${% endraw %} time series.
 
 **Come back for a future release where the threshold is automatically optimized using methods defined [here](https://www.mdpi.com/2077-1312/8/4/289).**
 
@@ -126,16 +129,16 @@ Limitations of the POT method:
 You can still select this method if the criteria isn't met, it it seems like it will be better for your use case.
 
 
-##### Weibull<!-- omit in toc -->
+### Weibull<!-- omit in toc -->
 
 The Weibull method utilizes the MHKiT function [`mkhit.loads.extreme.peaks_distribution_weibull`](https://mhkit-software.github.io/MHKiT/mhkit-python/api.loads.html#mhkit.loads.extreme.peaks_distribution_weibull).
 
-Unlike the Annual Maxima and Peaks Over Threshold methods, the Weibull method uses the entire {% raw %}$$H_{mo}$${% endraw %} time series to estimate the peaks distribution. 
+Unlike the Annual Maxima and Peaks Over Threshold methods, the Weibull method uses the entire {% raw %}$$H_{m0}$${% endraw %} time series to estimate the peaks distribution. 
 
-##### Weibull Tail<!-- omit in toc -->
+### Weibull Tail<!-- omit in toc -->
 
 The Weibull Tail method utilizes the MHKiT function [`mkhit.loads.extreme.peaks_distribution_weibull_tail`](https://mhkit-software.github.io/MHKiT/mhkit-python/api.loads.html#mhkit.loads.extreme.peaks_distribution_weibull_tail_fit).
 
-Unlike the Annual Maxima and Peaks Over Threshold methods, the Weibull Tail method uses the entire {% raw %}$$H_{mo}$${% endraw %} time series to estimate the peaks distribution. 
+Unlike the Annual Maxima and Peaks Over Threshold methods, the Weibull Tail method uses the entire {% raw %}$$H_{m0}$${% endraw %} time series to estimate the peaks distribution. 
 
 

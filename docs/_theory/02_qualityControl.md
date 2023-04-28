@@ -3,14 +3,16 @@ title: Quality Control
 permalink: /theory/qualityControl
 sidebar:
   nav: "theory"
+toc: true
+toc_label: "Sections"
+toc_icon: "cog"
+toc_sticky: true
 ---
 
 To perform statistical analysis on the measured or modeled data for your site location, it's important to make sure the data's has been cleaned and controlled for unrealistic abnormalities.
 
 While the modeled data usually doesn't need much cleaning due to the hindcast's extensive validation, the measured data sources from buoys and stations are much more vulnerable to inconsistencies in the data.
 
-1. [QA Inputs](#inputs)
-2. [QA Results](#results)
 
 All QA procedures are implemented using functions from [Pecos](https://pecos.readthedocs.io/en/latest/index.html), that are exposed through [MHKiT](https://mhkit-software.github.io/MHKiT/index.html) API.
 
@@ -18,10 +20,10 @@ Pecos reference:
 
 * K.A. Klise and J.S. Stein (2016), Performance Monitoring using Pecos, Technical Report SAND2016-3583, Sandia National Laboratories, Albuquerque, NM.
 
-## Inputs
+# Inputs
 
 The Pecos documentation for the functions used can be found in the [pecos.monitoring module](https://pecos.readthedocs.io/en/latest/apidoc/pecos.monitoring.html).
-### Corrupt Data
+## Corrupt Data
 
 Uses the `check_corrupt` Pecos function.
 
@@ -29,7 +31,7 @@ Drop equivalent values found in the data set.  The measured data sources both ha
 
 For example, some [NDBC](https://www.ndbc.noaa.gov/) buoys fill corrupt data points with -999 so they're already dropped.
 
-### Range Tests
+## Range Tests
 
 Uses the `check_range` Pecos function.
 
@@ -37,15 +39,15 @@ Define the upper and lower bounds of the expected range of data.  Helpful if you
 
 Values outside of the range are dropped.
 
-### Delta Tests
+## Delta Tests
 
 Uses the `check_delta` Pecos function. 
 
-Checks for stagnant and/or abrupt changes across a rolling window of the time series data. Uses the max and min values to find the delta in the window.  The direction is `None` for the function to catch both if the max occurs before the min or the min before the max in the rolling window.
+Checks for stagnant and/or abrupt changes across a rolling window of the time series data. Uses the max and min values to find the delta in the window.  The `direction` argument is `None` for the pecos function to catch both if the max occurs before the min or the min before the max in the rolling window.
 
 The entire rolling window where the delta is outside of the upper or lower bounds are dropped.
 
-### Outlier
+## Outlier
 
 Uses the `check_outlier` Pecos function.
 
@@ -58,11 +60,11 @@ Specify outliers via the number of standard deviations away from the mean.
 The tool only accepts the upper bound parameter, and passes `absolute_value=True` to the `check_outlier` function. This allows for using the same variance +/- from the mean in the rolling window.
 
 
-## Results
+# Results
 
 Other than the two listed below, the results simply show the number of points dropped and why (above/ below a bound) per test.
 
-### Timestamp
+## Timestamp
 
 Timestamp checks are rooted in the `check_timestamp` function from Pecos.  With the following high-level flow:
 
@@ -77,7 +79,7 @@ Giving results:
 2. Gaps in data - top 5 (if existing) largest gaps in the data. Look at the number of days missing, combined with the start and end dates to see if the data set is potentially missing mostly winter months. The data could be a bad representation of the extreme wave conditions if winter is often missing.
 3. Temporal Resolution - observed spacing between measurements.  The most frequently observed temporal resolution is used in statistic calculations.
 
-### Water Depth
+## Water Depth
 
 When water depth data is available from the data source, its displayed.
 

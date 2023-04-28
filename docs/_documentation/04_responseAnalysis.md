@@ -7,6 +7,14 @@ sidebar:
 
 Once dynamic simulations or tank testing is completed from the surface elevation time series downloaded through the DLC Generator, the final step in the workflow is uploading a file to perform extreme value response analysis on.
 
+See the [theory documentation](/theory/responseAnalysis) for more information on the analysis itself.
+
+## Data Storage
+
+Neither the file(s) uploaded, nor the data contained in the output/ report of the response analysis are saved by the tool. 
+
+Download the report to keep a personal record of the response analysis done. If you come back later, you'll need to re-upload the data and re-run the analysis to view the results.
+
 ## File Format
 
 There are two accepted file formats:
@@ -16,7 +24,6 @@ There are two accepted file formats:
 ## NetCDF
 
 NetCDF is the most robust file format.  Using the netCDF file format allows for multiple cases to be analyzed in one run, units to be given to the response time series, and is a common file format in the scientific computing industry.
-
 
 
 ### Example NetCDF Files
@@ -36,10 +43,7 @@ The matlab example creates the properly formatted file.  The MATLAB example crea
 
 You can [download the example MATLAB file][4], or you can copy and pase pieces from the following code.
 
-<details>
-  <summary>Show Code</summary>
-
-  ```m
+```m
   %%=========================================================================
   % Create a netCDF-4/HDF5 file
   % DLC system expects the NETCDF4/HDF5 file format
@@ -69,7 +73,6 @@ You can [download the example MATLAB file][4], or you can copy and pase pieces f
   % add the dimension data of case and time
   netcdf.putVar(ncid, caseVarId, cases);
   netcdf.putVar(ncid, timeVarId, time);
-
 
   %% Create Data Variables ==================================================
 
@@ -137,13 +140,8 @@ You can [download the example MATLAB file][4], or you can copy and pase pieces f
 
   %% Display the file format =================================================
   ncdisp('example.nc')
-  ```
-
-
-</details>
-
-
-Text
+  
+```
 
 
 [1]:{{ site.url }}/download/example.ipynb
