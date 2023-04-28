@@ -52,7 +52,7 @@ DOE's [Water Power Technology Office's](https://www.energy.gov/eere/water/water-
 
 The modeled data is hosted publicly by DOE and WPTO. See the docs [here](https://registry.opendata.aws/wpto-pds-us-wave/).  
 
-The data is currently a 32-year data set (1979-2010) with plans to expand to 2020 in the future.
+The data is currently a 32-year data set (1979-2010) with plans to expand the date range in the future.
 
 The tool refers to these data sets as:
 1. Hindcast Virtual Buoys
