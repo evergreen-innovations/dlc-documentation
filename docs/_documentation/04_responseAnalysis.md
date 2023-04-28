@@ -39,7 +39,7 @@ You can [download the example MATLAB file][4], or you can copy and pase pieces f
 <details>
   <summary>Show Code</summary>
 
-  ```MATLAB
+  ```m
   %%=========================================================================
   % Create a netCDF-4/HDF5 file
   % DLC system expects the NETCDF4/HDF5 file format
