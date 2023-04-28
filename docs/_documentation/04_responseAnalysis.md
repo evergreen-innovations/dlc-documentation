@@ -28,7 +28,7 @@ The python example is a Jupyter Notebook with two related CSV's (of the surface 
 
 [Download the python example notebook][1] and download [first][2] and [second][3] CSV's if you'd like a starting point.
 
-Or you can look at the python notebook in your browser <a href="/download/example-notebook.html" target="_blank">here</a>.
+Or you can look at the python notebook in your browser <a href="{{ site.url }}/download/example-notebook.html" target="_blank">here</a>.
 
 ###### MATLAB
 
