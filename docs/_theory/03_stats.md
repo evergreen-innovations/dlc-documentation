@@ -76,7 +76,7 @@ All contours are calculated using the I-FORM approach. I-FORM is the inverse fir
 
 Once contours have been formed, use either number of samples or width of intervals between the samples to define what sea states will be available for generating surface elevation time series from.
 
-The {% raw %}$$H_{m0}$${% endraw %} values are interpolated from the contour line from the provided at the selected period points using [`scipy.interpolate.interp1d`](https://docs.scipy.org/doc/scipy/reference/generated/scipy.interpolate.interp1d.html)
+The {% raw %}$$H_{m0}$${% endraw %} values are interpolated from the contour line from the provided at the selected period points using [`scipy.interpolate.interp1d`](https://docs.scipy.org/doc/scipy/reference/generated/scipy.interpolate.interp1d.html).
 
 # Univariate Methods
 

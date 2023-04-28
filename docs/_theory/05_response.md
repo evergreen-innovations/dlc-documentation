@@ -13,7 +13,7 @@ toc_sticky: true
 
 The developer uses the downloaded surface elevation time series, performs tests while collecting response variables (motions of or forces exerted on the WEC device), then performs an extreme value analysis on each of the response variables captured.
 
-See the [tool documentation](/documentation/responseAnalysis) for information on creating the uploaded response file to the DLC Generator.
+See the [tool documentation]({{site.url}}/documentation/responseAnalysis) for information on creating the uploaded response file to the DLC Generator.
 
 {{site.doc-name}} Section 7.3 has detailed requirements for the testing.
 
@@ -25,7 +25,7 @@ The extreme value analysis is performed to align with the {{site.doc-name}} Sect
 
 ## Statistical Method
 
-The method selected uses the same univariate distributions as described in [Statistics](/theory/stats#univariate-methods). 
+The method selected uses the same univariate distributions as described in [Statistics]({{site.url}}/theory/stats#univariate-methods). 
 
 ### Peaks Over Threshold
 

@@ -7,7 +7,7 @@ sidebar:
 
 Once dynamic simulations or tank testing is completed from the surface elevation time series downloaded through the DLC Generator, the final step in the workflow is uploading a file to perform extreme value response analysis on.
 
-See the [theory documentation](/theory/responseAnalysis) for more information on the analysis itself.
+See the [theory documentation]({{site.url}}/theory/responseAnalysis) for more information on the analysis itself.
 
 ## Data Storage
 

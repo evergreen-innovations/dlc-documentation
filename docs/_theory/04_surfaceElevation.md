@@ -75,7 +75,7 @@ NumPy's [`numpy.fft.irfft`](https://numpy.org/doc/stable/reference/generated/num
 
 # {% raw %}$$ H_{rated} $${% endraw %} Period Range 
 
-The tool also allows the developer to input their {% raw %}$$ H_{rated} $${% endraw %} value, then use the [{{ site.doc-name }} Section 6.2.2.3 Formula (3)](/theory/stats#univariate-methods) to calculate the associated peak period range for the {% raw %}$$ H_{rated} $${% endraw %} spectral parameters.
+The tool also allows the developer to input their {% raw %}$$ H_{rated} $${% endraw %} value, then use the [{{ site.doc-name }} Section 6.2.2.3 Formula (3)]({{site.url}}/theory/stats#univariate-methods) to calculate the associated peak period range for the {% raw %}$$ H_{rated} $${% endraw %} spectral parameters.
 
 
 
