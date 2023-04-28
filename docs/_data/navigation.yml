@@ -1,7 +1,7 @@
 main:
   - title: Theory
     url: /theory/
-  - title: Tool Usage
+  - title: Documentation
     url: /documentation/
 
 theory:
@@ -17,9 +17,11 @@ theory:
         url: /theory/responseAnalysis
 
 documentation:
-  - title: Tool Usage
+  - title: Documentation
     children:
-      - title: Data Disclaimers
+      - title: Data Sources & Disclaimers
         url: /documentation/dataDisclaimers
+      - title: Tool Workflow
+        url: /documentation/toolWorkflow
       - title: Response Analysis Upload
         url: /documentation/responseAnalysis

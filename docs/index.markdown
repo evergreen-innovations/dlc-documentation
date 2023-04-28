@@ -8,26 +8,28 @@ permalink: /index.html
 date: 2023-04-24
 header:
   overlay_color: "#000"
-  overlay_filter: "0.5"
+  overlay_filter: "0.6"
   overlay_image: assets/images/wave.jpeg 
 #   overlay_filter: rgba(18, 126, 128, 0.5)
-  caption: ""
-excerpt: "Documentation lives here!"
+excerpt: "Documentation lives here"
+intro:
+  - excerpt: "Do we have a good description to put here?"
 feature_row:
   - image_path: assets/images/maths.jpeg
     alt: "placeholder image 1"
     title: "Theory"
-    excerpt: "The math behind the scenes"
+    excerpt: "The math behind the scenes."
     url: "/theory/"
     btn_label: "Read More"
     btn_class: "btn--inverse"
   - image_path: assets/images/docs.jpeg 
     alt: ""
-    title: "Tool Usage"
-    excerpt: "Documentation and Disclaimers"
+    title: "Documentation"
+    excerpt: "Docs on using the web tool."
     url: "/documentation/"
     btn_label: "Read More"
     btn_class: "btn--inverse"
 ---
+{% include feature_row id="intro" type="center" %}
 
 {% include feature_row %}

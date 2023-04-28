@@ -44,7 +44,7 @@ head_scripts:
 markdown: kramdown
 highlighter: rouge
 lsi: false
-excerpt_separator: "\n"
+excerpt_separator: "\n\n"
 incremental: true
 
 # search: true
