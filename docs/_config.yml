@@ -72,6 +72,8 @@ collections:
     output: true
     permalink: /:collection/:path/:title
 
+atom_feed:
+  hide: true
 
 # Defaults
 defaults:

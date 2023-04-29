@@ -11,7 +11,7 @@ The DLC Generator supports and enables WEC developers, **who own a copy of the [
 
 ## General References
 
-1. Tool built following [{{site.doc-name}}]({{site.doc-link}}) guidelines.
+1. Tool built to help a developer following [{{site.doc-name}}]({{site.doc-link}}) guidelines.
 2. Many calculations performed using [MHKiT](https://mhkit-software.github.io/MHKiT/index.html).
 3. Recommended Practices [DNV-RP-C205](https://www.dnv.com/oilgas/download/dnv-rp-c205-environmental-conditions-and-environmental-loads.html).
 4. Term Definitions [IEC Subject Area 417](https://www.electropedia.org/iev/iev.nsf/index?openform&part=417).
