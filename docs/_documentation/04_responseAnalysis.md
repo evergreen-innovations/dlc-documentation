@@ -13,13 +13,7 @@ Once dynamic simulations or tank testing is completed from the surface elevation
 
 See the [theory documentation]({{site.url}}/theory/responseAnalysis) for more information on the analysis itself.
 
-# Data Storage
-
-Neither the file(s) uploaded, nor the data contained in the output/ report of the response analysis are saved by the tool. 
-
-Download the report to keep a personal record of the response analysis done. If you come back later, you'll need to re-upload the data and re-run the analysis to view the results.
-
-# File Format
+# File Formats
 
 There are two accepted file formats:
 1. [NetCDF](https://en.wikipedia.org/wiki/NetCDF)
@@ -31,7 +25,7 @@ NetCDF is the most robust file format.  Using the netCDF file format allows for 
 
 ### Data Structure
 
-The data structure for the netCDF has the coordinates or **time** and **case**, and teh variables are the response value arrays that are indexed by **time** and **case**.
+The data structure for the netCDF has the coordinates or **time** and **case**, and the variables are the response value arrays that are indexed by **time** and **case**.
 
 Printing file in python should produce an output with the same coordinates, and the same indexing pattern on the data variables:
 
@@ -57,14 +51,14 @@ Data variables:
 
 There are two example scripts, one written for MATLAB, and another for python.  
 
-##### Python 
+#### Python 
 The python example is a Jupyter Notebook with two related CSV's (of the surface elevation downloaded through the DLC Generator). The notebook performs a simple simulation of a mock device in order to create mock response variables. 
 
 [Download the python example notebook][1] and download [first][2] and [second][3] CSV's if you'd like a starting point.
 
 Or you can look at the python notebook in your browser <a href="{{ site.url }}/download/example-notebook.html" target="_blank">here</a>.
 
-##### MATLAB
+#### MATLAB
 
 The MATLAB example creates the properly formatted file.  The MATLAB example creates the sample surface elevation time series randomly in the file and performs a simple simulation of a mock device to create mock response variables.
 
@@ -194,6 +188,11 @@ The [python](#python) example above optionally outputs valid CSV's for each case
 1. The `time` column must be in seconds (simulation/ tank time), NOT a datetime or string.
 2. No NaN's/ nulls can be present in the response data columns
 
+# Data Storage
+
+Neither the file(s) uploaded, nor the data contained in the output/ report of the response analysis are saved by the tool. 
+
+Download the report to keep a personal record of the response analysis done. If you come back later, you'll need to re-upload the data and re-run the analysis to view the results.
 
 
 

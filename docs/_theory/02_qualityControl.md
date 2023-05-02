@@ -20,7 +20,7 @@ Pecos reference:
 
 * K.A. Klise and J.S. Stein (2016), Performance Monitoring using Pecos, Technical Report SAND2016-3583, Sandia National Laboratories, Albuquerque, NM.
 
-# Inputs
+# Quality Control Parameters
 
 The Pecos documentation for the functions used can be found in the [pecos.monitoring module](https://pecos.readthedocs.io/en/latest/apidoc/pecos.monitoring.html).
 ## Corrupt Data
@@ -43,9 +43,11 @@ Values outside of the range are dropped.
 
 Uses the `check_delta` Pecos function. 
 
-Checks for stagnant and/or abrupt changes across a rolling window of the time series data. Uses the max and min values to find the delta in the window.  The `direction` argument is `None` for the pecos function to catch both if the max occurs before the min or the min before the max in the rolling window.
+Checks for stagnant and/or abrupt changes across a rolling window of the time series data. Uses the max and min values to find the delta (max - min) in the window.  
 
-The entire rolling window where the delta is outside of the upper or lower bounds are dropped.
+The entire window where the calculated delta is outside of the upper or lower bounds is dropped.
+
+The `direction` argument is `None` for the Pecos function to catch both if the max occurs before the min or the min before the max in the rolling window.
 
 ## Outlier
 
@@ -69,7 +71,7 @@ Other than the two listed below, the results simply show the number of points dr
 Timestamp checks are rooted in the `check_timestamp` function from Pecos.  With the following high-level flow:
 
 1. Extract dominant temporal resolution in the time series data (measured data sources often aren't entirely evenly spaced)
-2. Use the dominant temporal resolution and `check_timestamp` to get the gaps in the data
+2. Use the dominant temporal resolution and `check_timestamp` to locate the gaps in the data
 3. Use dominant temporal resolution to calculate the percent of the data set that is missing
 4. Parse the results of `check_timestamp` to report the largest gaps found in the data set
 
