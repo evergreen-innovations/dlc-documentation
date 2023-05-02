@@ -15,21 +15,22 @@ excerpt: "Documentation lives here"
 intro:
   - excerpt: "Do we have a good description to put here?"
 feature_row:
-  - image_path: assets/images/maths.jpeg
+  - image_path: assets/images/math-2.jpeg
     alt: "placeholder image 1"
     title: "Theory"
     excerpt: "The math behind the scenes."
     url: "/theory/"
     btn_label: "Read More"
     btn_class: "btn--inverse"
-  - image_path: assets/images/docs.jpeg 
+  - image_path: assets/images/docs-2.jpeg 
     alt: ""
     title: "Documentation"
     excerpt: "Docs on using the web tool."
     url: "/documentation/"
     btn_label: "Read More"
     btn_class: "btn--inverse"
+classes: wide
 ---
 <!-- {% include feature_row id="intro" type="center" %} -->
 
-{% include feature_row %}
+{% include feature_row layout="half" %}

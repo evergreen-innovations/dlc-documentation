@@ -34,7 +34,7 @@ Across the top of many of the pages are a set of tabs.  Each project will have i
 
 ## Location Selection
 
-Drag and drop or edit the coordinates and radius to change the project's location.
+Drag and drop the red marker or edit the coordinates and radius to change the project's location.
 
 Setting a project location allows you to select data locations for the given project.  This project location can be changed at any time.
 

@@ -27,7 +27,7 @@ NetCDF is the most robust file format.  Using the netCDF file format allows for 
 
 The data structure for the netCDF has the coordinates or **time** and **case**, and the variables are the response value arrays that are indexed by **time** and **case**.
 
-Printing file in python should produce an output with the same coordinates, and the same indexing pattern on the data variables:
+Printing [`xarray`](https://docs.xarray.dev/en/stable/) dataset from netCDF file in python should produce an output with the same coordinates, and the same indexing pattern on the data variables:
 
 ```
 <xarray.Dataset>
@@ -43,9 +43,9 @@ Data variables:
 #### Requirements
 
 1. Sample rate (time variable) needs to be consistent across all cases and response variables. These names are case sensitive.
-2. Data Variables (device response arrays) need to exist across all cases. IE Case 1 having 4 response variables and Case 2 having 5 is invalid.  Both would need 5 response variables. 
+2. Data Variables (device response arrays) need to exist across all cases. IE Case 1 having 4 response variables and Case 2 having 5 is invalid.
 3. Time array is in seconds (simulation/ tank time), NOT a datetime or string.
-4. No NaN's/ nulls can be present in the response data variables.
+4. No NaN's/ nulls can be present in the response data variables or time coordinate.
 
 ### Example NetCDF Scripts
 
@@ -60,7 +60,9 @@ Or you can look at the python notebook in your browser <a href="{{ site.url }}/d
 
 #### MATLAB
 
-The MATLAB example creates the properly formatted file.  The MATLAB example creates the sample surface elevation time series randomly in the file and performs a simple simulation of a mock device to create mock response variables.
+The MATLAB example creates the sample surface elevation time series randomly in the file and performs a simple simulation of a mock device to create mock response variables.
+
+MATLAB documentation for netCDF files can be found [here](https://www.mathworks.com/help/matlab/import_export/exporting-to-network-common-data-form-netcdf-files.html#bsxb70y-1).  Lower-level functions are required in order to have the `cmode` to `NETCDF4` for use through the DLC Generator tool.
 
 You can [download the example MATLAB file][4], or you can copy and pase pieces from the following code.
 

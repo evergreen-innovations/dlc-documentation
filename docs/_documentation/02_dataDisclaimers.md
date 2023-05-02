@@ -58,7 +58,7 @@ The tool refers to these data sets as:
 1. Hindcast Virtual Buoys
 2. Hindcast Grid Points
 
-More general information available [here](https://www.nrel.gov/water/wave-hindcast-dataset.html)
+More general information available [here](https://www.nrel.gov/water/wave-hindcast-dataset.html).
 
 ### Virtual Buoys
 
@@ -67,6 +67,7 @@ More general information available [here](https://www.nrel.gov/water/wave-hindca
 Virtual buoys are only available in the following regions:
 1. Atlantic (East Coast)
 2. West Coast
+  
 ### Grid Points
 
 3-hour temporal resolution grid of points down to 200m spatial resolution.  Typically the resolution becomes more fine-grained and dense as approaching the coast lines.
