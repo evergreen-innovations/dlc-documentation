@@ -7,7 +7,7 @@ ncid = netcdf.create('example.nc', cmode);
 
 %% Create Dimensions ======================================================
 % cases and time are the dimensions for the NETCDF file
-cases = ["DLC 6.2 Hs 5 Tp 10", "DLC 6.2 Hs 6 Tp 11"];
+cases = ["RM3 WEC Response Hs 5 Tp 10", "RM3 WEC Response Hs 6 Tp 11"];
 time = linspace(0, 3600, 3600*20);
 
 % create dimensions and return ids
