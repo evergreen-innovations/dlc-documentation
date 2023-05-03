@@ -23,9 +23,12 @@ MHKiT is used to calculate the extreme value with [`mhkit.loads.extreme.short_te
 
 The extreme value analysis is performed to align with the {{site.doc-name}} Section 7.3 specifications, using a 3-hour sea state as the short-term period.
 
+See [comparison of methods for estimating short-term extreme response of wave energy converters](https://ieeexplore.ieee.org/document/7401878) for more information.
+
 ## Statistical Method
 
 The method selected uses the same univariate distributions as described in [Statistics]({{site.url}}/theory/stats#univariate-methods). 
+
 
 ### Peaks Over Threshold
 

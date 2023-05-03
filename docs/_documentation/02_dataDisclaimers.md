@@ -27,7 +27,7 @@ Data courtesy of {% raw %}<a href="https://cdip.ucsd.edu/">CDIP</a>.{% endraw %}
 The DLC Generator tool automates the process of:
 1. Interacting with the THREDDS server and gathering all years of available data for a given buoy.
 2. Takes the wave spectral density data ({% raw %}$$m^2/H_z$${% endraw %} indexed by {% raw %}$$H_z$${% endraw %}) from the buoy and uses [MHKiT Wave Resource Module](https://mhkit-software.github.io/MHKiT/mhkit-python/api.wave.html#resource) to calculate spectral parameters {% raw %}$$H_{m0}$${% endraw %}, {% raw %}$$T_p$${% endraw %}, and {% raw %}$$T_e$${% endraw %}.
-3. Removing duplicate time indexes, null values, and known corrupt values from the final time series data ([details](/theory/qualityControl#corrupt-data)).
+3. Removing duplicate time indexes, and null values.
 
 ## NDBC Stations
 
@@ -43,6 +43,13 @@ The `stdmet` parameter data is simply collected, and the same basic quality assu
 The `swden` parameter data undergoes the same process as CDIP (all steps above).
 
 Due to the two parameters available from NDBC, you may find a few stations that appear to be duplicated.  The names may be the same, however one is from `stdmet` and one is from `swden`.  Using the **Has Te** filter in the mapping page would remove the `stdmet` option.
+
+### Known Corrupt Values
+
+NDBC has known corrupt values which are removed before presenting the data in the DLC tool:
+
+- `stdmet` - `999.0`
+- `swden` - `99.0`
 
 # Modeled Data Sources
 

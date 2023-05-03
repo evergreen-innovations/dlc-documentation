@@ -17,7 +17,6 @@ These time series can then be used in tank testing, or dynamic simulations of yo
 
 DLC's are defined in [{{site.doc-name}}]({{site.doc-link}}), Table 7 - Design load cases for WECs. There are other environmental conditions beyond the wave conditions generated through the tool that must be considered when creating the full DLC for each design condition.  
 
-<!-- # Sea State Realizationomit in toc -->
 
 # Sea State Selections<!-- omit in toc -->
 
@@ -62,9 +61,9 @@ Very long or very short period values ({% raw %}$$ T_e $${% endraw %} or {% raw 
 
 ## Random Seed<!-- omit in toc -->
 
-The random seed seeds the random number generator used to create the random phases for the surface elevation time series.  
+The random seed initializes the random number generator used to create the random phases for the surface elevation time series.  
  
-{{site.doc-name}} Section 7.3.6, has requirements around load case modeling and simulation.  Changing the random seed, then downloading the updated surface elevation time series may help satisfy these requirements.
+{{site.doc-name}} Section 7.3.6, has requirements around load case modeling and simulation.  Changing the random seed, then downloading the new surface elevation time series may help satisfy these requirements.
 
 # Sea State Realization<!-- omit in toc -->
 

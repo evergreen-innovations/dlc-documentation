@@ -9,9 +9,9 @@ toc_icon: "cog"
 toc_sticky: true
 ---
 
-Statistics take the cleaned site data and quantify sea states as significant wave height ({% raw %}$$ H_{m0} $${% endraw %}) and period ({% raw %}$$ T_e $$ {% endraw %} or {% raw %} $$ T_p $${% endraw %}) pairs.  These spectral parameters define the extreme and abnormal stochastic sea states for your site location.
+The Statistics pages use the cleaned site data to determine the wave conditions required for design using {{site.doc-name}}. Table 7 in the IEC Standard specifies three design conditions corresponding to return periods of 1 and 50 years, and the designer-selected rated condition. These states are typically referred to in terms of the significant wave heights as {% raw %}$$H_{m1}$${% endraw %}, {% raw %}$${H_{m50}}$${% endraw %}, and {% raw %}$$H_{\mathrm{rated}}$${% endraw %} respectively.
 
-{{ site.doc-name }}, Table 7, specifies 3 unique wave conditions as part of the Design Load Cases: **{% raw %}$$ H_{m1} $${% endraw %}**, **{% raw %}$$ H_{m50} $${% endraw %}**, and **{% raw %}$$ H_{rated} $${% endraw %}**.  The statistics quantify spectral parameters for the {% raw %}$$ H_{m1} $${% endraw %} and {% raw %}$$ H_{m50} $${% endraw %} requirements.
+See [Characterization of Extreme Wave Conditions for Wave Energy Converter Design and Project Risk Assessment](https://www.mdpi.com/2077-1312/8/4/289) for more information on why the statistics are calculated as well as guidance on univariate vs contour approaches.
 
 # Approaches
 
@@ -20,6 +20,8 @@ Statistics take the cleaned site data and quantify sea states as significant wav
 # Joint Distribution and Contour Methods
 
 Calculates the joint distribution of the sea states and forms contour lines from the distribution.  Samples across the contour lines quantify sea states that are used in generating surface elevation time series for tank testing or numerical modeling.
+
+See [Development of a Comparison Framework for Evaluating Environmental Contours of Extreme Sea States](https://www.mdpi.com/2077-1312/9/1/16) for more information on environmental contours.
 
 ## Model Structures<!-- omit in toc -->
 
@@ -68,7 +70,7 @@ The contours are calculated from a Gaussian copula. See the code implementation 
 
 ## IFORM Contour<!-- omit in toc -->
 
-All contours are calculated using the I-FORM approach. I-FORM is the inverse first order reliability method. More information on the IFORM contours can be found in [DNV-RP-C205](https://www.dnv.com/oilgas/download/dnv-rp-c205-environmental-conditions-and-environmental-loads.html) Section 3.7 Extreme Value Distribution.
+All contours are calculated using the IFORM approach. IFORM is the Inverse First Order Reliability Method. More information on the IFORM contours can be found in [DNV-RP-C205](https://www.dnv.com/oilgas/download/dnv-rp-c205-environmental-conditions-and-environmental-loads.html) Section 3.7 Extreme Value Distribution.
 
 [Winterstein et al. (1993)](https://www.researchgate.net/publication/288935223_Environmental_parameters_for_extreme_response_inverse_FORM_with_omission_factors) introduces the IFORM contour.
 
@@ -77,6 +79,8 @@ All contours are calculated using the I-FORM approach. I-FORM is the inverse fir
 Once contours have been formed, use either number of samples or width of intervals between the samples to define what sea states will be available for generating surface elevation time series from.
 
 The {% raw %}$$H_{m0}$${% endraw %} values are interpolated from the contour line from the provided at the selected period points using [`scipy.interpolate.interp1d`](https://docs.scipy.org/doc/scipy/reference/generated/scipy.interpolate.interp1d.html).
+
+See [DNV-RP-C205](https://www.dnv.com/oilgas/download/dnv-rp-c205-environmental-conditions-and-environmental-loads.html) for more information on how the samples across the contour form the sea states.
 
 # Univariate Methods
 

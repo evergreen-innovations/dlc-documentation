@@ -13,8 +13,7 @@ To perform statistical analysis on the measured or modeled data for your site lo
 
 While the modeled data usually doesn't need much cleaning due to the hindcast's extensive validation, the measured data sources from buoys and stations are much more vulnerable to inconsistencies in the data.
 
-
-All QA procedures are implemented using functions from [Pecos](https://pecos.readthedocs.io/en/latest/index.html), that are exposed through [MHKiT](https://mhkit-software.github.io/MHKiT/index.html) API.
+All QA procedures are implemented using functions from [Pecos](https://pecos.readthedocs.io/en/latest/index.html), that are exposed through [MHKiT](https://mhkit-software.github.io/MHKiT/index.html).
 
 Pecos reference:
 
@@ -27,9 +26,7 @@ The Pecos documentation for the functions used can be found in the [pecos.monito
 
 Uses the `check_corrupt` Pecos function.
 
-Drop equivalent values found in the data set.  The measured data sources both have known corrupt/ fill values and they are already dropped when the data is collected. 
-
-For example, some [NDBC](https://www.ndbc.noaa.gov/) buoys fill corrupt data points with -999 so they're already dropped.
+Drop values equal to user input from the dataset.  Some sources, such as [NDBC]({{site.url}}/documentation/dataDisclaimers#known-corrupt-values), have known corrupt values which are removed before presenting the data in the DLC tool.
 
 ## Range Tests
 
@@ -55,9 +52,13 @@ Uses the `check_outlier` Pecos function.
 
 Remove outliers, calculated across a rolling window, from normalized data.  Data is normalized using:
 
-$$ x:=\frac{x-\mu}{\sigma} $$
+$$ \bar{x} = \frac{x-\mu}{\sigma} $$
 
-Specify outliers via the number of standard deviations away from the mean.  
+Where:
+* {% raw %}$$\mu$${% endraw %} is the mean of the dataset
+* {% raw %}$$\sigma$${% endraw %} is the standard deviation of the dataset
+
+Specify outliers via the number of standard deviations away from the mean. 
 
 The tool only accepts the upper bound parameter, and passes `absolute_value=True` to the `check_outlier` function. This allows for using the same variance +/- from the mean in the rolling window.
 
@@ -73,7 +74,7 @@ Timestamp checks are rooted in the `check_timestamp` function from Pecos.  With 
 1. Extract dominant temporal resolution in the time series data (measured data sources often aren't entirely evenly spaced)
 2. Use the dominant temporal resolution and `check_timestamp` to locate the gaps in the data
 3. Use dominant temporal resolution to calculate the percent of the data set that is missing
-4. Parse the results of `check_timestamp` to report the largest gaps found in the data set
+4. Report largest gaps found in the dataset from the results of `check_timestamp`
 
 Giving results:
 

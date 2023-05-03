@@ -25,3 +25,5 @@ documentation:
         url: /documentation/toolWorkflow
       - title: Response Analysis Upload
         url: /documentation/responseAnalysis
+      - title: Symbols and Abbreviations
+        url: /documentation/abbr
