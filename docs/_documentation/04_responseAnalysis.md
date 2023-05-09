@@ -62,6 +62,8 @@ Or you can look at the python notebook in your browser <a href="{{ site.url }}/d
 
 The MATLAB example creates the sample surface elevation time series randomly in the file and performs a simple simulation of a mock device to create mock response variables.
 
+**The matlab example assumes MATLAB version r2021b or newer** - the `NC_STRING` datatype support was added in this release.
+
 MATLAB documentation for netCDF files can be found [here](https://www.mathworks.com/help/matlab/import_export/exporting-to-network-common-data-form-netcdf-files.html#bsxb70y-1).  Lower-level functions are required in order to have the `cmode` to `NETCDF4` for use through the DLC Generator tool.
 
 You can [download the example MATLAB file][4], or you can copy and pase pieces from the following code.
