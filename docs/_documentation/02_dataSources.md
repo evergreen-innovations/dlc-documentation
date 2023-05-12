@@ -1,6 +1,6 @@
 ---
-title: External Data Sources & Disclaimers
-permalink: /documentation/dataDisclaimers
+title: External Data Sources
+permalink: /documentation/dataSources
 sidebar:
   nav: "documentation"
 toc: true
