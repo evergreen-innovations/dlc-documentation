@@ -93,11 +93,6 @@ Only the 4 closest grid points are shown when selecting your site location.
 3. [Alaska](https://doi.org/10.1016/j.renene.2021.02.005)
 4. [Hawaii](https://doi.org/10.1016/j.renene.2021.03.116)
 
-# Data Disclaimers
 
-None of the source data is collected/ measured/ modeled/ owned by DOE, Sandia, or Evergreen Innovations. The following disclaimers apply:
-1. [CDIP](https://cdip.ucsd.edu/m/documents/data_access.html#data-use-and-acknowledgements) - Costal Data Information Program
-2. [NDBC](https://www.weather.gov/disclaimer) - NOAA (National Oceanic and Atmospheric Administration) National Data Buoy Center
-3. [DOE WPTO](https://github.com/openEDI/documentation/blob/main/US_Wave.md#disclaimer-and-attribution) - DOE Water Power Technology Office
 
 
