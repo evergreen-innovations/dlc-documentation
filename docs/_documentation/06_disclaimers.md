@@ -1,5 +1,5 @@
 ---
-title: External Data Sources
+title: Tool Disclaimers
 permalink: /documentation/disclaimers
 sidebar:
   nav: "documentation"
