@@ -22,11 +22,18 @@ feature_row:
     url: "/theory/"
     btn_label: "Read More"
     btn_class: "btn--inverse"
-  - image_path: assets/images/docs-2.jpeg 
+  - image_path: assets/images/docs-2-new.jpg 
     alt: ""
-    title: "Documentation"
+    title: "Web Interface"
     excerpt: "Docs on using the web tool."
-    url: "/documentation/"
+    url: "/interface/"
+    btn_label: "Read More"
+    btn_class: "btn--inverse"
+  - image_path: assets/images/disclaim.png 
+    alt: ""
+    title: "Disclaimers"
+    excerpt: "Disclaimers related to the tool."
+    url: "/disclaimers/"
     btn_label: "Read More"
     btn_class: "btn--inverse"
 classes: wide

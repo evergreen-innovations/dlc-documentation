@@ -9,9 +9,9 @@ toc_icon: "cog"
 toc_sticky: true
 ---
 
-To perform statistical analysis on the measured or modeled data for your site location, it's important to make sure the data's has been cleaned and controlled for unrealistic abnormalities.
+To perform statistical analysis on the measured or modeled data for the site location, it's important to make sure the data has has been cleaned and controlled for unrealistic abnormalities.
 
-While the modeled data usually doesn't need much cleaning due to the hindcast's extensive validation, the measured data sources from buoys and stations are much more vulnerable to inconsistencies in the data.
+While the modeled data usually doesn't need much cleaning due to the hindcast's extensive validation, the measured data sources from buoys and stations are much more vulnerable to inconsistencies.
 
 All QA procedures are implemented using functions from [Pecos](https://pecos.readthedocs.io/en/latest/index.html), that are exposed through [MHKiT](https://mhkit-software.github.io/MHKiT/index.html).
 
@@ -26,13 +26,13 @@ The Pecos documentation for the functions used can be found in the [pecos.monito
 
 Uses the `check_corrupt` Pecos function.
 
-Drop values equal to user input from the dataset.  Some sources, such as [NDBC]({{site.url}}/documentation/dataDisclaimers#known-corrupt-values), have known corrupt values which are removed before presenting the data in the DLC tool.
+Drop values equal to user input from the dataset.  Some sources, such as [NDBC]({{site.url}}/interface/dataSources#known-corrupt-values), have known corrupt values which are removed before presenting the data in the DLC tool.
 
 ## Range Tests
 
 Uses the `check_range` Pecos function.
 
-Define the upper and lower bounds of the expected range of data.  Helpful if you are familiar with an area and know that there shouldn't be Significant Wave Height values > 10 m for example. 
+Define the upper and lower bounds of the expected range of data.  Helpful if familiar with an area and know that there shouldn't be Significant Wave Height values > 10 m for example. 
 
 Values outside of the range are dropped.
 

@@ -1,12 +1,12 @@
 ---
-title: Tool Disclaimers
-permalink: /documentation/disclaimers
-sidebar:
-  nav: "documentation"
+title: "Tool Disclaimers"
+permalink: /disclaimers/
+classes: wide2
 toc: true
 toc_label: "Sections"
 toc_icon: "cog"
 toc_sticky: true
+breadcrumbs: false
 ---
 
 # {{site.doc-name}}

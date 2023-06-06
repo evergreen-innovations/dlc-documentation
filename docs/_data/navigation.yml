@@ -1,8 +1,10 @@
 main:
   - title: Theory
     url: /theory/
-  - title: Documentation
-    url: /documentation/
+  - title: Web Interface
+    url: /interface/
+  - title: Disclaimers
+    url: /disclaimers/
 
 theory:
   - title: Theory
@@ -16,16 +18,14 @@ theory:
       - title: Response Analysis
         url: /theory/responseAnalysis
 
-documentation:
-  - title: Documentation
+interface:
+  - title: Web Interface
     children:
       - title: Data Sources
-        url: /documentation/dataSources
+        url: /interface/dataSources
       - title: Tool Workflow
-        url: /documentation/toolWorkflow
+        url: /interface/toolWorkflow
       - title: Response Analysis Upload
-        url: /documentation/responseAnalysis
+        url: /interface/responseAnalysis
       - title: Symbols and Abbreviations
-        url: /documentation/abbr
-      - title: Disclaimers
-        url: /documentation/disclaimers
+        url: /interface/abbr

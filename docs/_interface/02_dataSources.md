@@ -1,8 +1,8 @@
 ---
 title: External Data Sources
-permalink: /documentation/dataSources
+permalink: /interface/dataSources
 sidebar:
-  nav: "documentation"
+  nav: "interface"
 toc: true
 toc_label: "Sections"
 toc_icon: "cog"
@@ -26,8 +26,8 @@ Data courtesy of {% raw %}<a href="https://cdip.ucsd.edu/">CDIP</a>.{% endraw %}
 
 The DLC Generator tool automates the process of:
 1. Interacting with the THREDDS server and gathering all years of available data for a given buoy.
-2. Takes the wave spectral density data ({% raw %}$$m^2/H_z$${% endraw %} indexed by {% raw %}$$H_z$${% endraw %}) from the buoy and uses [MHKiT Wave Resource Module](https://mhkit-software.github.io/MHKiT/mhkit-python/api.wave.html#resource) to calculate spectral parameters {% raw %}$$H_{m0}$${% endraw %}, {% raw %}$$T_p$${% endraw %}, and {% raw %}$$T_e$${% endraw %}.
-3. Removing duplicate time indexes, and null values.
+2. Takes the wave spectral density data ({% raw %}$$m^2/H_z$${% endraw %}) from the buoy and uses [MHKiT Wave Resource Module](https://mhkit-software.github.io/MHKiT/mhkit-python/api.wave.html#resource) to calculate spectral parameters {% raw %}$$H_{m0}$${% endraw %}, {% raw %}$$T_p$${% endraw %}, and {% raw %}$$T_e$${% endraw %}.
+3. Removing duplicate timestamps, and invalid/ non-numeric values.
 
 ## NDBC Stations
 
@@ -38,7 +38,7 @@ The DLC generator currently utilizes the [`stdmet`](https://www.ndbc.noaa.gov/da
 - `stdmet` - Standard Meteorological Current Year Historical Data
 - `swden` - Raw Spectral Wave Current Year Historical Data
 
-The `stdmet` parameter data is simply collected, and the same basic quality assurance is performed as CDIP (Step 3 above).  These data sources don't have {% raw %}T_e{% endraw %} available.
+The `stdmet` data provides {% raw %}$$H_{m0}$${% endraw %}, {% raw %}$$T_p$${% endraw %} directly, and the same basic quality assurance is performed as CDIP (Step 3 above).  These data sources don't have {% raw %}$$T_e$${% endraw %} available.
 
 The `swden` parameter data undergoes the same process as CDIP (all steps above).
 
@@ -57,7 +57,7 @@ NDBC has known corrupt values which are removed before presenting the data in th
 
 DOE's [Water Power Technology Office's](https://www.energy.gov/eere/water/water-power-technologies-office) (WPTO) US Wave Dataset.
 
-The modeled data is hosted publicly by DOE and WPTO. See the docs [here](https://registry.opendata.aws/wpto-pds-us-wave/).  
+The modeled data is [hosted publicly](https://registry.opendata.aws/wpto-pds-us-wave/) by DOE and WPTO.
 
 The data is currently a 32-year data set (1979-2010) with plans to expand the date range in the future.
 

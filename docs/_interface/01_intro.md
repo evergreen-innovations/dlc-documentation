@@ -1,8 +1,8 @@
 ---
-title: Documentation
-permalink: /documentation/
+title: Web Interface
+permalink: /interface/
 sidebar:
-  nav: "documentation"
+  nav: "interface"
 gallery:
   - url: /assets/images/map.png
     image_path: /assets/images/map.png
@@ -23,15 +23,15 @@ gallery:
 classes: wide 
 ---
 
-The DLC Generator tool is geared towards marine energy design conditions. In essence, the tool is intended to help marine energy developers obtain design load conditions, including 1- and 50-year sea states. These return periods are requirements according to [{{site.doc-name}}]({{site.doc-link}}).
+The Design Load Case (DLC) Generator tool supports the development of marine energy applications. The tool provides the data and the analysis to allow developers to obtain design load conditions, including 1- and 50-year sea states. These return periods are requirements according to [{{site.doc-name}}]({{site.doc-link}}).
 
 {% include gallery layout="half"%}
 
 ### The Tool
 
 1. Collects site data from over 7.9 million unique sources of modeled and measured data.
-2. Uses quality-controlled site data to quantify stochastic sea states through different validated and accepted statistical approaches.
-3. Generates surface elevation time series from the stochastic sea states for use in numerical modeling or wave tank testing.
+2. Uses quality-controlled site data to quantify stochastic sea states through validated and accepted statistical approaches.
+3. Generates irregular surface elevation time series data from spectral representations of a sea state for use in numerical modelling or wave tank testing.
 4. Performs extreme response analysis on the results of tank testing or numerical modeling to quantify extreme characteristics.
 
 

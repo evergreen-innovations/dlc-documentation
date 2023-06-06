@@ -1,8 +1,8 @@
 ---
 title: Symbols and Abbreviations
-permalink: /documentation/abbr
+permalink: /interface/abbr
 sidebar:
-  nav: "documentation"
+  nav: "interface"
 ---
 
 | Symbol | Description|

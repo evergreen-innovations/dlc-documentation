@@ -1,8 +1,8 @@
 ---
 title: Response Analysis Upload
-permalink: /documentation/responseAnalysis
+permalink: /interface/responseAnalysis
 sidebar:
-  nav: "documentation"
+  nav: "interface"
 toc: true
 toc_label: "Sections"
 toc_icon: "cog"

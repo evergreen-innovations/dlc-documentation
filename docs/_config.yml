@@ -68,7 +68,10 @@ collections:
   theory:
     output: true
     permalink: /:collection/:path/:title
-  documentation:
+  interface:
+    output: true
+    permalink: /:collection/:path/:title
+  disclaimers:
     output: true
     permalink: /:collection/:path/:title
 
@@ -93,7 +96,7 @@ defaults:
   # _usecases
   - scope:
       path: ""
-      type: documentation
+      type: interface
     values:
       layout: single
       # classes: wide
@@ -101,7 +104,17 @@ defaults:
       share: false
       comments: false
       sidebar:
-        nav: "documentation"
+        nav: "interface"
+  - scope:
+      path: ""
+      type: disclaimers
+    values:
+      layout: single
+      # classes: wide
+      author_profile: false
+      share: false
+      comments: false
+      
 
 # Exclude from processing.
 # The following items will not be processed, by default.
