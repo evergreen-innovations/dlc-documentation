@@ -108,6 +108,6 @@ See the [theory docs]({{site.url}}/theory/surfaceElevation) for more information
 
 The device response analysis aims to help developers quantify the extreme characteristic of the loads and motions of a WEC device.
 
-Currently, [{{site.doc-name}}]({{site.doc-link}}) specifies that the ULS (ultimate limit state) partial safety factor shall be applied to loads on the WEC. The tool performs the same analysis regardless of the type of variables being assessed, for example motions of pressures.  Judgement, alongside the {{site.doc-name}}, is required in order to determine how to use the results of the response analysis.
+Currently, [{{site.doc-name}}]({{site.doc-link}}) specifies that the ULS (ultimate limit state) partial safety factor shall be applied to loads on the WEC. The tool performs the same analysis regardless of the type of variables being assessed, for example motions or pressures.  Judgement, alongside the {{site.doc-name}}, is required in order to determine how to use the results of the response analysis.
 
 See the [theory docs]({{site.url}}/theory/responseAnalysis) for more information on the implementation of the response analysis.

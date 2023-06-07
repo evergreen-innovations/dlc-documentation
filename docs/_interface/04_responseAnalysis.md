@@ -54,9 +54,10 @@ There are two example scripts, one written for MATLAB, and another for python.
 #### Python 
 The python example is a Jupyter Notebook with two related CSV's (of the surface elevation downloaded through the DLC Generator). The notebook performs a simple simulation of a mock device in order to create mock response variables. 
 
-[Download the python example notebook][1] and download [first][2] and [second][3] CSV's if you'd like a starting point.
+View the python notebook in your browser <a href="{{ site.url }}/download/example-notebook.html" target="_blank">here</a>.
 
-Or you can look at the python notebook in your browser <a href="{{ site.url }}/download/example-notebook.html" target="_blank">here</a>.
+Or, [Download the python example notebook][1] and download [first][2] and [second][3] CSV's if you'd like a starting point.
+
 
 #### MATLAB
 
@@ -66,7 +67,7 @@ The MATLAB example creates the sample surface elevation time series randomly in 
 
 MATLAB documentation for netCDF files can be found [here](https://www.mathworks.com/help/matlab/import_export/exporting-to-network-common-data-form-netcdf-files.html#bsxb70y-1).  Lower-level functions are required in order to have the `cmode` to `NETCDF4` for use through the DLC Generator tool.
 
-You can [download the example MATLAB file][4], or you can copy and pase pieces from the following code.
+[Download the example MATLAB file][4], or copy and paste pieces from the following code.
 
 ```m
 %%=========================================================================
@@ -171,11 +172,11 @@ ncdisp('example.nc')
 
 ## CSV
 
-In addition to netCDF files, you can upload and process one case at time by uploading CSV files.
+In addition to netCDF files, one case can be uploaded and processed at time by uploading CSV files.
 
 ### Data Structure
 
-The data structure of the CSV file contains a `time` column and at least 1 response variable column (can have as many response columns as you'd like). The `time` column header is not case sensitive.  The headers for the rest of the columns will be reported as the Response Name in the tool's UI and downloaded reports.
+The data structure of the CSV file contains a `time` column and at least 1 response variable column. The `time` column header is not case sensitive.  The headers for the rest of the columns will be reported as the Response Name in the tool's UI and downloaded reports.
 
 The following csv would be valid (truncated):
 
@@ -191,13 +192,13 @@ The [python](#python) example above optionally outputs valid CSV's for each case
 #### Requirements
 
 1. The `time` column must be in seconds (simulation/ tank time), NOT a datetime or string.
-2. No NaN's/ nulls can be present in the response data columns
+2. No NaN's/ nulls can be present in the response data columns and they must be numeric values.
 
 # Data Storage
 
 Neither the file(s) uploaded, nor the data contained in the output/ report of the response analysis are saved by the tool. 
 
-Download the report to keep a personal record of the response analysis done. If you come back later, you'll need to re-upload the data and re-run the analysis to view the results.
+Download the report to keep a personal record of the response analysis done. If returning later, data will need to be  re-upload and analysis re-ran to view the results.
 
 
 
