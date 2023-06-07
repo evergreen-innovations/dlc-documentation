@@ -54,9 +54,9 @@ There are two example scripts, one written for MATLAB, and another for python.
 #### Python 
 The python example is a Jupyter Notebook with two related CSV's (of the surface elevation downloaded through the DLC Generator). The notebook performs a simple simulation of a mock device in order to create mock response variables. 
 
-View the python notebook in your browser <a href="{{ site.url }}/download/example-notebook.html" target="_blank">here</a>.
+View the python notebook in a browser <a href="{{ site.url }}/download/example-notebook.html" target="_blank">here</a>.
 
-Or, [Download the python example notebook][1] and download [first][2] and [second][3] CSV's if you'd like a starting point.
+Or, [Download the python example notebook][1] and download [first][2] and [second][3] CSV's to use as a starting point.
 
 
 #### MATLAB

@@ -42,7 +42,7 @@ The `stdmet` data provides {% raw %}$$H_{m0}$${% endraw %}, {% raw %}$$T_p$${% e
 
 The `swden` parameter data undergoes the same process as CDIP (all steps above).
 
-Due to the two parameters available from NDBC, you may find a few stations that appear to be duplicated.  The names may be the same, however one is from `stdmet` and one is from `swden`.  Using the **Has Te** filter in the mapping page would remove the `stdmet` option.
+Due to the two parameters available from NDBC, there may be a few stations that appear to be duplicated.  The names may be the same, however one is from `stdmet` and one is from `swden`.  Using the **Has Te** filter in the mapping page would remove the `stdmet` option.
 
 ### Known Corrupt Values
 

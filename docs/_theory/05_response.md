@@ -13,7 +13,7 @@ toc_sticky: true
 
 The developer uses the downloaded surface elevation time series, performs tests while collecting response variables (motions of or forces exerted on the WEC device), then performs an extreme value analysis on each of the response variables captured.
 
-See the [tool documentation]({{site.url}}/interface/responseAnalysis) for information on creating the uploaded response file to the DLC Generator.
+See the [web interface documentation]({{site.url}}/interface/responseAnalysis) for information on creating the uploaded response file to the DLC Generator.
 
 {{site.doc-name}} Section 7.3 has detailed requirements for the testing.
 

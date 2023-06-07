@@ -25,14 +25,14 @@ feature_row:
   - image_path: assets/images/docs-2-new.jpg 
     alt: ""
     title: "Web Interface"
-    excerpt: "Docs on using the web tool."
+    excerpt: "Instructions on using the web tool."
     url: "/interface/"
     btn_label: "Read More"
     btn_class: "btn--inverse"
   - image_path: assets/images/disclaim.png 
     alt: ""
     title: "Disclaimers"
-    excerpt: "Disclaimers related to the tool."
+    excerpt: "Disclaimers related to the web tool."
     url: "/disclaimers/"
     btn_label: "Read More"
     btn_class: "btn--inverse"

@@ -22,6 +22,6 @@ The DLC Generator supports and enables WEC developers, **who own a copy of the [
 - References and papers covering the equations and calculations performed.
 - Guidance on best practices and recommendations from relevant papers and technical specifications.
 
-See the [tool documentation]({{site.url}}/interface/) for information on using the tool.
+See the [web interface documentation]({{site.url}}/interface/) for information on using the tool.
 
 

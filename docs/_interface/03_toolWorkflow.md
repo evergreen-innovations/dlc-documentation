@@ -65,7 +65,7 @@ Checking "Disregard" on a column, row, or cell indicates that the selected tests
 
 ### Re-cleaning Statistic Data Source
 
-Each project has one cleaned data set saved. Re-cleaning data will replace the original data and necessitates the re-running of any statistics computed in later stages of the workflow.  The tool guides users through the process of re-saving statistics via warning messages displayed on the screen if you fall into this scenario.
+Each project has one cleaned data set saved. Re-cleaning data will replace the original data and necessitates the re-running of any statistics computed in later stages of the workflow.  The tool guides users through the process of re-saving statistics via warning messages displayed on the screen if a user falls into this scenario.
 
 ## Cleaned Data Review
 

@@ -35,7 +35,7 @@ The Design Load Case (DLC) Generator tool supports the development of marine ene
 4. Performs extreme response analysis on the results of tank testing or numerical modeling to quantify extreme characteristics.
 
 
-This documentation section does not cover the theory behind the scenes, please see the [theory docs]({{site.url}}/theory/) for details on implementations and references.
+This documentation section does not cover the theory behind the scenes, please see the [theory documentation]({{site.url}}/theory/) for details on implementations and references.
 
 
 
