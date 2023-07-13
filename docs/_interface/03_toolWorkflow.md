@@ -32,9 +32,9 @@ Across the top of many of the pages are a set of tabs.  Each project will have i
 
 # Site Location
 
-## Location Selection
+## Data Source Selection
 
-Drag and drop the red marker or edit the coordinates and radius to change the project's location.
+Drag and drop the red marker or edit the coordinates and radius to change the project's location.  Available data sources are only shown within the radius drawn on the map.
 
 Selecting a data location or clicking "Save Changes" sets the project location.  This project location can be changed at any time.
 

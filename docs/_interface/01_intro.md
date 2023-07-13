@@ -23,7 +23,7 @@ gallery:
 classes: wide 
 ---
 
-The Design Load Case (DLC) Generator tool supports the development of marine energy applications. The tool provides the data and the analysis to allow developers to obtain design load conditions, including 1- and 50-year sea states. These return periods are requirements according to [{{site.doc-name}}]({{site.doc-link}}).
+The Design Load Case (DLC) Generator is geared towards marine energy design conditions. In essence, the tool is intended to help marine energy developer obtain design load conditions, including 1- and 50-year sea states. These return periods are requirements according to [{{site.doc-name}}]({{site.doc-link}}).
 
 {% include gallery layout="half"%}
 

@@ -42,6 +42,8 @@ The `stdmet` data provides {% raw %}$$H_{m0}$${% endraw %}, {% raw %}$$T_p$${% e
 
 The `swden` parameter data undergoes the same process as CDIP (all steps above).
 
+### Duplicated Buoys
+
 Due to the two parameters available from NDBC, there may be a few stations that appear to be duplicated.  The names may be the same, however one is from `stdmet` and one is from `swden`.  Using the **Has Te** filter in the mapping page would remove the `stdmet` option.
 
 ### Known Corrupt Values
@@ -72,7 +74,7 @@ More general information available [here](https://www.nrel.gov/water/wave-hindca
 1-hour temporal resolution where the hindcast was performed at select locations of interest.  
 
 Virtual buoys are only available in the following regions:
-1. Atlantic (East Coast)
+1. Atlantic (US East Coast)
 2. West Coast
   
 ### Grid Points
@@ -80,7 +82,7 @@ Virtual buoys are only available in the following regions:
 3-hour temporal resolution grid of points down to 200m spatial resolution.  Typically the resolution becomes more fine-grained and dense as approaching the coast lines.
 
 Grid points are available in all regions:
-1. Atlantic (East Coast)
+1. Atlantic (US East Coast)
 2. West Coast
 3. Hawaii
 4. Alaska

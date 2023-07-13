@@ -170,6 +170,9 @@ ncdisp('example.nc')
   
 ```
 
+
+Please be sure to run the `netcdf.close(ncid)` line. If this line isn't executed then you may receive a permission denied error as the file handle was left open.
+
 ## CSV
 
 In addition to netCDF files, one case can be uploaded and processed at time by uploading CSV files.
@@ -193,6 +196,47 @@ The [python](#python) example above optionally outputs valid CSV's for each case
 
 1. The `time` column must be in seconds (simulation/ tank time), NOT a datetime or string.
 2. No NaN's/ nulls can be present in the response data columns and they must be numeric values.
+
+
+# File Organization
+
+{{site.doc-name}} Section 7.3 has detailed requirements for testing a WEC.
+
+With repeated tests across many parameters, there are many ways a developer can choose to organize their response files for uploading to the DLC generator.  As long as the organization follows the requirements for the file types above, then the system will produce a result.
+
+**The following examples assume the developer is testing each DLC in Table 7 of {{site.doc-name}} with 6 different, 3-hour simulations.**  
+
+This could be assisted through the DLC Generator by changing the random seed of the generated surface elevation for example.
+
+## Organization Examples
+
+A developer can choose how to organize their files, the following examples are not the only way to organize the uploaded files.
+
+### With netCDF
+
+One file per DLC in Table 7 of {{site.doc-name}}: 
+
+1. Organize the data for one of the DLC's and upload a netCDF with 6 cases, where each case would be the results from one of the 6 simulations.
+2. Upload a separate netCDF file for each DLC in Table 7 and get an associated report for each of the DLC's.
+3. Every report would have a table for each of the six 3-hour simulations.
+
+
+### With CSV
+
+One file for each simulation run for a specific DLC in Table 7 of {{site.doc-name}}:
+
+1. Each CSV would follow the above requirements, capturing the data for a single 3-hour simulation. 
+2. Upload a separate CSV for all six 3-hour simulations for every DLC in Table 7 and get an associated report from the tool.
+3. The report would then contain one table, where each column in the CSV had extreme value analysis performed on it. 
+4. This would require many uploads by the developer, however it might work well to analyze one result while the next 3-hour simulation is running.
+
+
+One File per DLC in Table 7 of {{site.doc-name}}:
+
+1. The CSV would follow the above requirements, where the response columns could have a `_random_seed_N` (`pto_force_random_seed_1` for example) suffix to distinguish which of the six simulations it's associated with. 
+2. Upload a CSV for each DLC in table 7 and get an associated report from the tool.
+3. The report would then contain one table, where each column in the CSV had extreme value analysis performed on it. This table could be quite long depending on how many response variables there are in the WEC simulation.
+
 
 # Data Storage
 
