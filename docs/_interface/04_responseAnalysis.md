@@ -216,7 +216,7 @@ A developer can choose how to organize their files, the following examples are n
 
 One file per DLC in Table 7 of {{site.doc-name}}: 
 
-1. Organize the data for one of the DLC's and upload a netCDF with 6 cases, where each case would be the results from one of the 6 simulations.
+1. Organize the response data for a given DLC and upload a netCDF with 6 cases, where each case would be the results from one of the 6 simulations.
 2. Upload a separate netCDF file for each DLC in Table 7 and get an associated report for each of the DLC's.
 3. Every report would have a table for each of the six 3-hour simulations.
 
@@ -225,7 +225,7 @@ One file per DLC in Table 7 of {{site.doc-name}}:
 
 One file for each simulation run for a specific DLC in Table 7 of {{site.doc-name}}:
 
-1. Each CSV would follow the above requirements, capturing the data for a single 3-hour simulation. 
+1. Each CSV would follow the above requirements, capturing the response data for a single 3-hour simulation. 
 2. Upload a separate CSV for all six 3-hour simulations for every DLC in Table 7 and get an associated report from the tool.
 3. The report would then contain one table, where each column in the CSV had extreme value analysis performed on it. 
 4. This would require many uploads by the developer, however it might work well to analyze one result while the next 3-hour simulation is running.
